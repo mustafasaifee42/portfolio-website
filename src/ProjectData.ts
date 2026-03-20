@@ -26,6 +26,7 @@ export const ProjectData = [
     image: './imgs/covers/05.png',
     linkText: 'Explore the design system',
     link: 'https://react.design.undp.org/',
+    iconType: 'webpage',
   },
   {
     projectTitle: 'UNDP Data Futures Exchange',
@@ -37,6 +38,7 @@ export const ProjectData = [
     role: 'UI/UX design, front-end development, project management',
     image: './imgs/covers/04.png',
     linkText: 'View case study',
+    iconType: 'ppt',
     link: 'https://www.figma.com/deck/uOpvkuLy8jtEvaW2DUwFaj/UNDP-DFX-case-study?node-id=2025-2&t=TnwJP3lo7kjNCmoD-1',
   },
   {
@@ -50,6 +52,7 @@ export const ProjectData = [
     image: './imgs/covers/06.png',
     linkText: 'Explore the library',
     link: 'https://dataviz.design.undp.org/',
+    iconType: 'webpage',
   },
   {
     projectTitle: 'OnWatchScout',
@@ -66,6 +69,7 @@ export const ProjectData = [
     color: 'cyan',
     image: './imgs/covers/01.png',
     linkText: 'View case study',
+    iconType: 'ppt',
     link: 'https://www.figma.com/deck/53Ih8NfxcEV2SWcmPyCrj1/OnWatchScout-Case-Study?node-id=2038-361&t=27vLdiSzAXJn7vzP-1',
   },
   {
@@ -83,18 +87,20 @@ export const ProjectData = [
     role: 'UI/UX design',
     image: './imgs/covers/02.png',
     linkText: 'View case study',
+    iconType: 'ppt',
     link: 'https://www.figma.com/deck/D2XCARzwdEfCoo0zn4wnCV/Fingrid-Case-Study?node-id=1-303&t=A8GxSVoVBNCEGpf2-1',
   },
   {
     projectTitle: 'Aiven for Clickhouse',
     client: '__Aiven__ _(data infrastructure platform)_',
     description:
-      'A __managed cloud data warehouse__ based on open source ClickHouse - a fast, resource effective, columnar database that enables the generation of real-time analytical data reports using advanced SQL queries.',
+      'A __managed cloud data warehouse__ based on open source ClickHouse - a fast, resource effective, columnar database.',
     tags: ['Clickhouse', 'Developer tool', 'Developer experience'],
     color: 'orange',
     role: 'UI/UX design',
     image: './imgs/covers/07.png',
     linkText: 'View product video',
+    iconType: 'video',
     link: 'https://youtu.be/ursnscykdjo?si=p0vCuTap6aRLWzEt&t=52',
   },
   {
@@ -112,6 +118,7 @@ export const ProjectData = [
     role: 'UI/UX design',
     image: './imgs/covers/09.png',
     linkText: 'Learn more about Klaw',
+    iconType: 'video',
     link: 'https://www.youtube.com/watch?v=bYDPD0GsV8g',
   },
   {

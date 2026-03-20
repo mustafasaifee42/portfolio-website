@@ -4,10 +4,13 @@ import {
   ChevronRight,
   Download,
   Github,
+  Globe,
   Linkedin,
   Mail,
   PhoneCall,
+  Presentation,
   Terminal,
+  Video,
 } from 'lucide-react';
 import { MarkdownRenderer } from '@undp/design-system-react/MarkdownRenderer';
 
@@ -204,6 +207,13 @@ function App() {
                                   color: `var(--color-${project.color})`,
                                 }}
                               >
+                                {project.iconType === 'ppt' ? (
+                                  <Presentation size={16} />
+                                ) : project.iconType === 'video' ? (
+                                  <Video size={16} />
+                                ) : (
+                                  <Globe size={16} />
+                                )}
                                 {project.linkText}
                                 <ChevronRight className='group-hover:animate-[chevronMove_0.5s_ease-out_infinite]' />
                               </P>
@@ -307,7 +317,7 @@ function App() {
                   <div className='hidden lg:block absolute inset-0 w-full aspect-[9/16] rounded-[8px] overflow-hidden'>
                     <div className='absolute inset-0 w-full aspect-[9/16]'>
                       <div
-                        className={`w-full h-full mask-[url('./imgs/covers/cover-01.svg')] mask-center mask-no-repeat mask-contain -webkit-mask-[url('./imgs/covers/cover-01.svg')] -webkit-mask-center -webkit-mask-no-repeat -webkit-mask-contain scale-0 transition-transform duration-500 group-hover:scale-[2.5]`}
+                        className={`w-full h-full mask-[url('./imgs/covers/cover-01.svg')] mask-center mask-no-repeat mask-contain -webkit-mask-[url('./imgs/covers/cover-01.svg')] -webkit-mask-center -webkit-mask-no-repeat -webkit-mask-contain scale-0 transition-transform duration-500 group-hover:scale-[2.65]`}
                         style={{
                           backgroundColor: `var(--color-${colorList[i % 7]})`,
                         }}
@@ -334,6 +344,7 @@ function App() {
                                 color: `var(--color-${colorList[i % 7]})`,
                               }}
                             >
+                              <Globe size={16} />
                               View project
                               <ChevronRight className='group-hover:animate-[chevronMove_0.5s_ease-out_infinite]' />
                             </P>
