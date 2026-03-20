@@ -55,6 +55,37 @@ export const ProjectData = [
     iconType: 'webpage',
   },
   {
+    projectTitle: 'Aiven for Clickhouse',
+    client: '__Aiven__ _(data infrastructure platform)_',
+    description:
+      'A __managed cloud data warehouse__ based on open source ClickHouse - a fast, resource effective, columnar database.',
+    tags: ['Clickhouse', 'Developer tool', 'Developer experience'],
+    color: 'orange',
+    role: 'UI/UX design',
+    image: './imgs/covers/07.png',
+    linkText: 'View product video',
+    iconType: 'video',
+    link: 'https://youtu.be/ursnscykdjo?si=p0vCuTap6aRLWzEt&t=52',
+  },
+  {
+    projectTitle: 'Aiven Klaw',
+    client: '__Aiven__ _(data infrastructure platform)_',
+    description:
+      'A self-service platform for __managing and accessing Kafka data streams__, enabling developers to work with real-time data more efficiently.',
+    tags: [
+      'Data streaming',
+      'Apache Kafka',
+      'Developer tool',
+      'Developer experience',
+    ],
+    color: 'orange',
+    role: 'UI/UX design',
+    image: './imgs/covers/09.png',
+    linkText: 'Learn more about Klaw',
+    iconType: 'video',
+    link: 'https://www.youtube.com/watch?v=bYDPD0GsV8g',
+  },
+  {
     projectTitle: 'OnWatchScout',
     client: '__MacGregor__ _(cargo & load handling solutions)_',
     description:
@@ -89,37 +120,6 @@ export const ProjectData = [
     linkText: 'View case study',
     iconType: 'ppt',
     link: 'https://www.figma.com/deck/D2XCARzwdEfCoo0zn4wnCV/Fingrid-Case-Study?node-id=1-303&t=A8GxSVoVBNCEGpf2-1',
-  },
-  {
-    projectTitle: 'Aiven for Clickhouse',
-    client: '__Aiven__ _(data infrastructure platform)_',
-    description:
-      'A __managed cloud data warehouse__ based on open source ClickHouse - a fast, resource effective, columnar database.',
-    tags: ['Clickhouse', 'Developer tool', 'Developer experience'],
-    color: 'orange',
-    role: 'UI/UX design',
-    image: './imgs/covers/07.png',
-    linkText: 'View product video',
-    iconType: 'video',
-    link: 'https://youtu.be/ursnscykdjo?si=p0vCuTap6aRLWzEt&t=52',
-  },
-  {
-    projectTitle: 'Aiven Klaw',
-    client: '__Aiven__ _(data infrastructure platform)_',
-    description:
-      'A self-service platform for __managing and accessing Kafka data streams__, enabling developers to work with real-time data more efficiently.',
-    tags: [
-      'Data streaming',
-      'Apache Kafka',
-      'Developer tool',
-      'Developer experience',
-    ],
-    color: 'orange',
-    role: 'UI/UX design',
-    image: './imgs/covers/09.png',
-    linkText: 'Learn more about Klaw',
-    iconType: 'video',
-    link: 'https://www.youtube.com/watch?v=bYDPD0GsV8g',
   },
   {
     projectTitle: 'VR Ohjus',
