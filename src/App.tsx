@@ -1,4 +1,4 @@
-import { H2, H3, H6, P } from '@undp/design-system-react/Typography';
+import { H2, H3, P } from '@undp/design-system-react/Typography';
 import { Spacer } from '@undp/design-system-react/Spacer';
 import {
   ChevronRight,
@@ -6,6 +6,7 @@ import {
   Github,
   Linkedin,
   Mail,
+  PhoneCall,
   Terminal,
 } from 'lucide-react';
 import { MarkdownRenderer } from '@undp/design-system-react/MarkdownRenderer';
@@ -24,9 +25,10 @@ function App() {
     ? [
         ...new Set(
           order
-            .split('_')
-            .map(Number)
-            .filter(n => !isNaN(n)),
+            .toLowerCase()
+            .split('')
+            .filter(char => char >= 'a' && char <= 'z')
+            .map(char => char.charCodeAt(0) - 97),
         ),
       ]
     : [...Array(ProjectData.length).keys()];
@@ -83,23 +85,47 @@ function App() {
               Resume
             </a>
           </div>
-          <Spacer size='4xl' />
-          <H6
-            className='animate-blur-in text-subtle-foreground'
+          <Spacer size='7xl' />
+          <P
+            className='animate-blur-in font-normal! text-[18px]!'
             marginBottom='none'
           >
             Designed and developed for
-          </H6>
+          </P>
           <LogoTicker
             logos={[
-              './imgs/undp-logo.png',
-              './imgs/iceye-logo.png',
-              './imgs/aiven-logo.png',
-              './imgs/nordea-logo.png',
-              './imgs/vr-logo.png',
-              './imgs/fortum-logo.png',
-              './imgs/fingrid-logo.png',
-              './imgs/macgregor-logo.png',
+              {
+                logo: './imgs/undp-logo.png',
+                helpText: 'United Nations Development Programme',
+              },
+              {
+                logo: './imgs/iceye-logo.png',
+                helpText: 'ICEYE (Satellite & SAR Data)',
+              },
+              {
+                logo: './imgs/aiven-logo.png',
+                helpText: 'Aiven (Data Infrastructure Platform)',
+              },
+              {
+                logo: './imgs/nordea-logo.png',
+                helpText: 'Nordea (Banking & Financial Services)',
+              },
+              {
+                logo: './imgs/vr-logo.png',
+                helpText: 'VR Group (Finnish Railways)',
+              },
+              {
+                logo: './imgs/fortum-logo.png',
+                helpText: 'Fortum (Energy Company)',
+              },
+              {
+                logo: './imgs/fingrid-logo.png',
+                helpText: 'Fingrid (Electricity Transmission Operator)',
+              },
+              {
+                logo: './imgs/macgregor-logo.png',
+                helpText: 'MacGregor (Cargo & Load Handling Solutions)',
+              },
             ]}
           />
         </div>
@@ -131,13 +157,14 @@ function App() {
                 href={project.link}
               >
                 <div className='relative'>
-                  <div
-                    className='aspect-[125/79] w-full rounded-[8px] bg-cover bg-center bg-no-repeat'
-                    style={{
-                      backgroundImage: `url(${project.image})`,
-                    }}
-                  />
-                  <div className='absolute inset-0 w-full aspect-[125/79] rounded-[8px] overflow-hidden'>
+                  <div className='aspect-[125/79] w-full rounded-[8px] overflow-hidden'>
+                    <img
+                      className='aspect-[125/79] w-full bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-[1.1] lg:group-hover:scale-[1]'
+                      src={project.image}
+                      alt='cover'
+                    />
+                  </div>
+                  <div className='hidden lg:block absolute inset-0 w-full aspect-[125/79] rounded-[8px] overflow-hidden'>
                     <div className='absolute inset-0 w-full aspect-[125/79]'>
                       <div
                         className={`w-full h-full mask-[url('./imgs/covers/cover-01.svg')] mask-center mask-no-repeat mask-contain -webkit-mask-[url('./imgs/covers/cover-01.svg')] -webkit-mask-center -webkit-mask-no-repeat -webkit-mask-contain scale-0 transition-transform duration-500 group-hover:scale-[2.25]`}
@@ -145,20 +172,22 @@ function App() {
                           backgroundColor: `var(--color-${project.color})`,
                         }}
                       />
-                      <div className='text-white absolute inset-0 w-full p-10 scale-0 transition-transform duration-500 group-hover:scale-[1]'>
+                      <div className='text-white absolute inset-0 w-full p-6 xl:p-10 scale-0 transition-transform duration-500 group-hover:scale-[1]'>
                         <div className='h-full flex flex-col gap-4'>
                           <div className='grow'>
                             <MarkdownRenderer
                               text={project.description}
                               classNames={{
-                                p: 'text-[20px]! leading-[1.5]',
+                                p: 'text:[18px]! md:text-[18px]! xl:text-[20px]! leading-[1.5]',
                               }}
                             />
                             <P className='text-[16px]!' marginBottom='none'>
-                              Client:{' '}
-                              <span className='font-bold'>
-                                {project.client}
-                              </span>
+                              <MarkdownRenderer
+                                text={`Client: ${project.client}`}
+                                classNames={{
+                                  p: 'text-[16px]! mb-0',
+                                }}
+                              />
                             </P>
                             <Spacer size='base' />
                             <P className='text-[16px]!' marginBottom='none'>
@@ -169,21 +198,20 @@ function App() {
                           {project.link ? (
                             <div className='flex'>
                               <P
-                                className='text-[18px]! bg-white font-medium px-6 py-2 rounded-full flex items-center gap-2'
+                                className='text-[16px]! md:text-[16px]! xl:text-[18px]! bg-white font-medium px-6 py-2 rounded-full flex items-center gap-2'
                                 marginBottom='none'
                                 style={{
                                   color: `var(--color-${project.color})`,
                                 }}
                               >
                                 {project.linkText}
-                                <ChevronRight className='group-hover:animate-[chevronMove_1s_ease-out_infinite]' />
+                                <ChevronRight className='group-hover:animate-[chevronMove_0.5s_ease-out_infinite]' />
                               </P>
                             </div>
                           ) : (
                             <P
-                              className='text-[18px]! text-white font-medium'
+                              className='text-[16px]! md:text-[16px]! xl:text-[18px]! text-white font-medium'
                               marginBottom='none'
-                              decoration='italic'
                             >
                               {project.linkText}
                             </P>
@@ -220,14 +248,21 @@ function App() {
                     <MarkdownRenderer
                       text={project.description}
                       classNames={{
-                        p: 'text-[20px]! leading-[1.5]',
+                        p: 'text-[18px]! leading-[1.5]',
                       }}
                     />
-                    <P className='text-[16px]!' marginBottom='none'>
-                      Client:{' '}
-                      <span className='font-bold'>{project.client}</span> |
-                      Role: <span className='font-bold'>{project.role}</span>
-                    </P>
+                    <MarkdownRenderer
+                      text={`Client: ${project.client}`}
+                      classNames={{
+                        p: 'text-[16px]! mb-3',
+                      }}
+                    />
+                    <MarkdownRenderer
+                      text={`Role: __${project.role}__`}
+                      classNames={{
+                        p: 'text-[16px]! mb-0',
+                      }}
+                    />
                   </div>
                 </div>
               </div>
@@ -255,20 +290,21 @@ function App() {
         <Spacer size='8xl' />
         <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-12 gap-y-16'>
           {SideProjectData.map((project, i) => (
-            <div className='group relative flex flex-col gap-4 cursor-pointer'>
+            <div className='group relative flex flex-col gap-4'>
               <LinkOrDiv
                 key={i}
                 as={project.link ? 'a' : 'div'}
                 href={project.link}
               >
                 <div className='relative'>
-                  <div
-                    className='aspect-[9/16] w-full rounded-[8px] bg-cover bg-center bg-no-repeat'
-                    style={{
-                      backgroundImage: `url(${project.image})`,
-                    }}
-                  />
-                  <div className='absolute inset-0 w-full aspect-[9/16] rounded-[8px] overflow-hidden'>
+                  <div className='aspect-[9/16] w-full rounded-[8px] overflow-hidden'>
+                    <img
+                      className='aspect-[9/16] w-full bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-[1.1] lg:group-hover:scale-[1]'
+                      src={project.image}
+                      alt='cover'
+                    />
+                  </div>
+                  <div className='hidden lg:block absolute inset-0 w-full aspect-[9/16] rounded-[8px] overflow-hidden'>
                     <div className='absolute inset-0 w-full aspect-[9/16]'>
                       <div
                         className={`w-full h-full mask-[url('./imgs/covers/cover-01.svg')] mask-center mask-no-repeat mask-contain -webkit-mask-[url('./imgs/covers/cover-01.svg')] -webkit-mask-center -webkit-mask-no-repeat -webkit-mask-contain scale-0 transition-transform duration-500 group-hover:scale-[2.5]`}
@@ -276,10 +312,10 @@ function App() {
                           backgroundColor: `var(--color-${colorList[i % 7]})`,
                         }}
                       />
-                      <div className='text-white absolute inset-0 w-full p-10 scale-0 transition-transform duration-500 group-hover:scale-[1]'>
+                      <div className='text-white absolute inset-0 w-full p-10 scale-0 transition-transform duration-500 group-hover:lg:scale-[1]'>
                         <div className='h-full flex flex-col gap-4'>
                           <div className='grow'>
-                            <P className='text-[20px]! leading-[1.5]'>
+                            <P className='text-[18px]! md:text-[18px]! xl:text-[20px]! leading-[1.5]'>
                               {project.description}
                             </P>
                             <P className='text-[14px]!' marginBottom='none'>
@@ -292,14 +328,14 @@ function App() {
                           </div>
                           <div className='flex'>
                             <P
-                              className='text-[18px]! bg-white font-medium px-6 py-2 rounded-full flex items-center gap-2'
+                              className='text-[16px]! md:text-[16px]! xl:text-[18px]! bg-white font-medium px-6 py-2 rounded-full flex items-center gap-2'
                               marginBottom='none'
                               style={{
                                 color: `var(--color-${colorList[i % 7]})`,
                               }}
                             >
                               View project
-                              <ChevronRight className='group-hover:animate-[chevronMove_1s_ease-out_infinite]' />
+                              <ChevronRight className='group-hover:animate-[chevronMove_0.5s_ease-out_infinite]' />
                             </P>
                           </div>
                         </div>
@@ -326,7 +362,7 @@ function App() {
                     <MarkdownRenderer
                       text={project.description}
                       classNames={{
-                        p: 'text-[20px]! leading-[1.5]',
+                        p: 'text-[18px]! leading-[1.5]',
                       }}
                     />
                   </div>
@@ -345,7 +381,13 @@ function App() {
           [contact]
         </P>
         <Spacer size='8xl' />
-        <H3 className='font-normal leading-[1.5]'>Let's Talk ツ゚</H3>
+        <div className='flex gap-2 items-center'>
+          <H3 className='font-normal leading-[1.5]' marginBottom='none'>
+            Let's Talk
+          </H3>
+          <PhoneCall className='animate-[wave_1s_ease-out_infinite]' />
+        </div>
+        <Spacer size='lg' />
         <P>Have a project in mind? Let’s talk. Or just come say hi.</P>
         <div className='flex flex-wrap gap-x-4 gap-y-2'>
           <a

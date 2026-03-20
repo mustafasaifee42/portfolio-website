@@ -1,10 +1,15 @@
 export const ProjectData = [
   {
     projectTitle: 'Tactical Access',
-    client: 'ICEYE',
+    client: '__ICEYE__ _(satellite & SAR Data)_',
     description:
       'A __geospatial intelligence__ platform for ordering and accessing __real-time satellite data__ to support situational awareness and rapid decision-making.',
-    tags: ['Satellite data', 'Geospatial intelligence', 'Map based interface'],
+    tags: [
+      'Satellite data',
+      'Geospatial intelligence',
+      'Map based interface',
+      'B2B',
+    ],
     color: 'cyan',
     role: 'UI/UX design',
     image: './imgs/covers/08.png',
@@ -12,7 +17,7 @@ export const ProjectData = [
   },
   {
     projectTitle: 'UNDP Design System for React',
-    client: 'UNDP',
+    client: '__United Nations Development Programme__',
     description:
       'An open-source reusable __React component library__ and __design token system__ to standardize UI development across UNDP digital platforms.',
     tags: ['Design system', 'UI library', 'React', 'Shadcn', 'Tailwind'],
@@ -24,7 +29,7 @@ export const ProjectData = [
   },
   {
     projectTitle: 'UNDP Data Futures Exchange',
-    client: 'UNDP',
+    client: '__United Nations Development Programme__',
     description:
       'An __open-source data innovation for development impact__ to support policy decisions that accelerate sustainable development.',
     tags: ['International development', 'Data platform', 'Data visualization'],
@@ -36,7 +41,7 @@ export const ProjectData = [
   },
   {
     projectTitle: 'UNDP Data viz Library',
-    client: 'UNDP',
+    client: '__United Nations Development Programme__',
     description:
       'An open-source __React-based data visualization library__ with reusable chart components to support interactive dashboards and development data analysis.',
     tags: ['Data visualization', 'Charting library', 'Maps', 'React', 'D3'],
@@ -48,14 +53,14 @@ export const ProjectData = [
   },
   {
     projectTitle: 'OnWatchScout',
-    client: 'MacGregor',
+    client: '__MacGregor__ _(cargo & load handling solutions)_',
     description:
       'A situational awareness platform that provides __real-time vessel monitoring and operational insights__ to enhance maritime safety and decision-making',
     tags: [
-      'B2B',
       'Maritime analytics',
       'Operational dashboard',
       'Data visualization',
+      'B2B',
     ],
     role: 'UI/UX design',
     color: 'cyan',
@@ -65,14 +70,14 @@ export const ProjectData = [
   },
   {
     projectTitle: 'OmaFingrid',
-    client: 'Fingrid',
+    client: '__Fingrid__ _(electricity transmission operator)_',
     description:
       'A __data platform__ that allows energy market participants to __monitor Finland’s electricity grid__ through transmission metering, billing, reactive power, and disturbance data.',
     tags: [
-      'B2B',
       'Electricity grid monitoring',
       'Energy analytics',
       'Data visualization',
+      'B2B',
     ],
     color: 'red',
     role: 'UI/UX design',
@@ -82,10 +87,10 @@ export const ProjectData = [
   },
   {
     projectTitle: 'Aiven for Clickhouse',
-    client: 'Aiven',
+    client: '__Aiven__ _(data infrastructure platform)_',
     description:
       'A __managed cloud data warehouse__ based on open source ClickHouse - a fast, resource effective, columnar database that enables the generation of real-time analytical data reports using advanced SQL queries.',
-    tags: ['Clickhouse', 'Dev tool', 'Developer experience'],
+    tags: ['Clickhouse', 'Developer tool', 'Developer experience'],
     color: 'orange',
     role: 'UI/UX design',
     image: './imgs/covers/07.png',
@@ -94,24 +99,24 @@ export const ProjectData = [
   },
   {
     projectTitle: 'Aiven Klaw',
-    client: 'Aiven',
+    client: '__Aiven__ _(data infrastructure platform)_',
     description:
       'A self-service platform for __managing and accessing Kafka data streams__, enabling developers to work with real-time data more efficiently.',
     tags: [
       'Data streaming',
       'Apache Kafka',
-      'Dev tool',
+      'Developer tool',
       'Developer experience',
     ],
     color: 'orange',
     role: 'UI/UX design',
     image: './imgs/covers/09.png',
     linkText: 'Learn more about Klaw',
-    link: 'https://www.klaw-project.io/',
+    link: 'https://www.youtube.com/watch?v=bYDPD0GsV8g',
   },
   {
     projectTitle: 'VR Ohjus',
-    client: 'VR Ohjus',
+    client: '__VR Group__ _(Finnish railways)_',
     description:
       'A real-time monitoring platform for __railway operations__, enabling operators to __track network status and respond to disruptions__.',
     tags: ['Rail transport', 'Real-time monitoring', 'Data visualization'],
