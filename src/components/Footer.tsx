@@ -7,11 +7,11 @@ export default function FooterEl() {
     <footer>
       <div className='flex max-w-[1348px] mx-auto items-center w-full justify-between p-4 bg-transparent border-t border-gray-400 flex-wrap'>
         <div className='flex items-center gap-6 flex-wrap'>
-          <div className='font-mono text-[16px]'>Mustafa Saifee</div>
+          <div className='font-sans text-[16px]'>Mustafa Saifee</div>
           <a
             href='https://www.linkedin.com/in/mustafasaifee/'
             target='_blank'
-            className='font-mono text-[16px] flex items-center gap-1 bg-transparent'
+            className='font-sans text-[16px] flex items-center gap-1 bg-transparent'
             rel='noopener noreferrer'
           >
             LinkedIn
@@ -20,7 +20,7 @@ export default function FooterEl() {
           <a
             href='https://github.com/mustafasaifee42'
             target='_blank'
-            className='font-mono text-[16px] flex items-center gap-1 bg-transparent'
+            className='font-sans text-[16px] flex items-center gap-1 bg-transparent'
             rel='noopener noreferrer'
           >
             Github
@@ -29,8 +29,8 @@ export default function FooterEl() {
           <a
             href='mailto:saifee.mustafa@gmail.com'
             target='_blank'
-            className='font-mono text-[16px] flex items-center gap-1 bg-transparent'
             rel='noopener noreferrer'
+            className='font-sans text-[16px] flex items-center gap-1 bg-transparent'
           >
             Email
             <MoveUpRight size={16} />
@@ -38,14 +38,14 @@ export default function FooterEl() {
           <a
             href={`./docs/Resume_${resumeType}.pdf`}
             target='_blank'
-            className='font-mono text-[16px] flex items-center gap-1 bg-transparent'
+            className='font-sans text-[16px] flex items-center gap-1 bg-transparent'
             rel='noopener noreferrer'
           >
             Resume
             <MoveUpRight size={16} />
           </a>
         </div>
-        <div className='font-mono text-[16px]'>© 2026</div>
+        <div className='font-sans text-[16px]'>© 2026</div>
       </div>
     </footer>
   );
