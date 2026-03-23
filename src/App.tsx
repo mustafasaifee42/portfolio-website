@@ -12,12 +12,15 @@ import {
   Terminal,
   Video,
 } from 'lucide-react';
+import ReactGA from 'react-ga4';
 import { MarkdownRenderer } from '@undp/design-system-react/MarkdownRenderer';
 
 import LogoTicker from './components/LogoTicker';
 import TagsList from './components/TagsList';
 import { ProjectData, SideProjectData } from './ProjectData';
 import { LinkOrDiv } from './components/LinkOrDiv';
+
+ReactGA.initialize('G-F8KVV42796');
 
 function App() {
   const params = new URLSearchParams(window.location.search);
