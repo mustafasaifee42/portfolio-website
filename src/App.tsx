@@ -210,7 +210,7 @@ function App() {
                                   color: `var(--color-${project.color})`,
                                 }}
                               >
-                                {project.iconType === 'ppt' ? (
+                                {project.iconType === 'pdf' ? (
                                   <Presentation size={16} />
                                 ) : project.iconType === 'video' ? (
                                   <Video size={16} />

@@ -13,7 +13,9 @@ export const ProjectData = [
     color: 'cyan',
     role: 'UI/UX design',
     image: './imgs/covers/08.png',
-    linkText: 'Project under NDA, contact to learn more.',
+    linkText: 'Learn more',
+    link: 'https://www.iceye.com/sar-data/tactical-access',
+    iconType: 'webpage',
   },
   {
     projectTitle: 'UNDP Design System for React',
@@ -38,8 +40,8 @@ export const ProjectData = [
     role: 'UI/UX design, front-end development, project management',
     image: './imgs/covers/04.png',
     linkText: 'View case study',
-    iconType: 'ppt',
-    link: 'https://www.figma.com/deck/uOpvkuLy8jtEvaW2DUwFaj/UNDP-DFX-case-study?node-id=2025-2&t=TnwJP3lo7kjNCmoD-1',
+    iconType: 'pdf',
+    link: './docs/UNDP_DFX_Case_Study.pdf',
   },
   {
     projectTitle: 'UNDP Data viz Library',
@@ -100,8 +102,21 @@ export const ProjectData = [
     color: 'cyan',
     image: './imgs/covers/01.png',
     linkText: 'View case study',
-    iconType: 'ppt',
-    link: 'https://www.figma.com/deck/53Ih8NfxcEV2SWcmPyCrj1/OnWatchScout-Case-Study?node-id=2038-361&t=27vLdiSzAXJn7vzP-1',
+    iconType: 'pdf',
+    link: './docs/OnWatchScout_Case_Study.pdf',
+  },
+  {
+    projectTitle: 'VR Ohjus',
+    client: '__VR Group__ _(Finnish railways)_',
+    description:
+      'A real-time monitoring platform for __railway operations__, enabling operators to __track network status and respond to disruptions__.',
+    tags: ['Rail transport', 'Real-time monitoring', 'Data visualization'],
+    color: 'green',
+    role: 'UI/UX design, front-end development',
+    image: './imgs/covers/03.png',
+    linkText: 'View case study',
+    iconType: 'pdf',
+    link: './docs/VR_Ohjus_Case_Study.pdf',
   },
   {
     projectTitle: 'OmaFingrid',
@@ -118,19 +133,8 @@ export const ProjectData = [
     role: 'UI/UX design',
     image: './imgs/covers/02.png',
     linkText: 'View case study',
-    iconType: 'ppt',
-    link: 'https://www.figma.com/deck/D2XCARzwdEfCoo0zn4wnCV/Fingrid-Case-Study?node-id=1-303&t=A8GxSVoVBNCEGpf2-1',
-  },
-  {
-    projectTitle: 'VR Ohjus',
-    client: '__VR Group__ _(Finnish railways)_',
-    description:
-      'A real-time monitoring platform for __railway operations__, enabling operators to __track network status and respond to disruptions__.',
-    tags: ['Rail transport', 'Real-time monitoring', 'Data visualization'],
-    color: 'green',
-    role: 'UI/UX design, front-end development',
-    image: './imgs/covers/03.png',
-    linkText: 'Case study coming soon',
+    iconType: 'pdf',
+    link: './docs/Fingrid_Case_Study.pdf',
   },
 ];
 
