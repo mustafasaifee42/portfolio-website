@@ -255,7 +255,7 @@ function App() {
                 )}
                 <Spacer size='lg' />
                 <TagsList tags={project.tags} color={project.color} />
-                <div className='text-grey-02 opacity-ghost block lg:hidden'>
+                <div className='text-grey-02 opacity-ghost block'>
                   <Spacer size='lg' />
                   <div>
                     <MarkdownRenderer
