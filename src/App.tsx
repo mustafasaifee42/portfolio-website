@@ -64,9 +64,9 @@ function App() {
 					<H3 className="animate-blur-in font-normal leading-[1.5]">
 						10+ years{" "}
 						<span className="text-subtle-foreground">
-							designing and building data-rich products across
-						</span>{" "}
-						space, SaaS, finTech, energy, and international development.
+							turning complex data into clear, interactive stories for the
+							public and for policymakers.
+						</span>
 					</H3>
 					<Spacer size="xl" />
 					<div className="flex gap-4 animate-blur-in">
